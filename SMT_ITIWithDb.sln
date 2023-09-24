@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMT_ITIWithDb", "SMT_ITIWithDb\SMT_ITIWithDb.csproj", "{0CDA24EC-B629-4333-97C3-CAE503F007FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CDA24EC-B629-4333-97C3-CAE503F007FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CDA24EC-B629-4333-97C3-CAE503F007FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CDA24EC-B629-4333-97C3-CAE503F007FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CDA24EC-B629-4333-97C3-CAE503F007FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6DB4F37-B520-474F-979C-73043541F2C0}
+	EndGlobalSection
+EndGlobal
