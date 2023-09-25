@@ -8,30 +8,43 @@
 <Form action="/Employee/AddToDB">
 
     <label for="Name">Name</label>
-    <input type="text" id="Name" name="Name" />
+    <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example" id="Name" name="Name">
+
     <br />
 
     <label for="Age">Age</label>
-    <input type="number" id="Age" name="Age" />
+ 
+    <input class="form-control form-control-lg" type="number" placeholder=".form-control-lg" aria-label=".form-control-lg example" id="Age" name="Age">
+
     <br />
 
 
     <label for="Salary">Salary</label>
-    <input type="number" id="Salary" name="Salary" />
+    <input class="form-control form-control-lg" type="number" placeholder=".form-control-lg" aria-label=".form-control-lg example" id="Salary" name="Salary">
+
+  
     <br />
 
     <label for="Email">Email</label>
-    <input type="text" id="Email" name="Email" />
+    <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example" id="Email" name="Email">
     <br />
 
 
     <label for="Password">Password</label>
-    <input type="text" id="Password" name="Password" />
+    <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example" id="Password" name="Password">
     <br />
 
     <label for="Img">Image</label>
-    <input type="text" id="Img" name="Img" />
+    <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example" id="Img" name="Img">
     <br />
-
-    <input type="submit" value="Add" />
+    <label for="Office">Office</label>
+    <select class="form-select" aria-label="Default select example" name="Office_Id" id="Office">
+    @foreach (Office Off1 in ViewBag.Off)
+    {
+        <option value="@Off1.Id">@Off1.Name</option>
+    }
+</select>
+    <br />
+    <input type="submit" value="Add" class="btn btn-outline-primary" />
 </Form>
+

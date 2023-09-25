@@ -2,21 +2,24 @@
 @{
     ViewData["Title"] = "Details";
 }
-<h1>Employee Details</h1>
 
 
-<h3>Name</h3>
-<p>@Model.Name</p>
-
-<h3>Age</h3>
-<p>@Model.Age</p>
-<h3>Salary</h3>
-<p>@Model.Salary</p>
-<h3>Email</h3>
-<p>@Model.Email</p>
-<h3>Img</h3>
-<p><img src="/Images/@Model.Img" /></p>
-
-
-<h5><a href="/Employee/index">Back to list</a></h5>
-
+<div class="card text-center" style="align-items:center">
+    <h1>Employee Details</h1>
+    <img src="/Images/@Model.Img" class="card-img-top" alt="..." style="width:300px">
+    <div class="card-body">
+        <h5 class="Name">@Model.Name</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Age : @Model.Age</li>
+        <li class="list-group-item">Salary :@Model.Salary</li>
+        <li class="list-group-item">Email : @Model.Email</li>
+        @if (Model.Office_Id > 0)
+        {
+            <li class="list-group-item">Office: @Model.Office.Name</li>
+        }
+    </ul>
+    <div class="card-body">
+        <h5><a href="/Employee/index" class="btn btn-outline-primary">Back to list</a></h5>
+    </div>
+</div>

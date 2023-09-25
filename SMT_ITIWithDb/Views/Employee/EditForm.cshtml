@@ -1,0 +1,46 @@
+﻿@model Employee
+
+
+<h1>Edit Employee</h1>
+
+
+<form action="/Employee/EditInDB">
+
+    <input value="@Model.Id" name="Id" hidden />
+    <label for="Name">Name</label>
+    <input class ="form-control form-control-lg" aria-label=".form-control-lg example" type="text" id="Name" name="Name" value="@Model.Name" />
+    <br />
+
+    <label for="Email">Email</label>
+    <input class="form-control form-control-lg" aria-label=".form-control-lg example" type="text" id="Email" name="Email" value="@Model.Email" />
+    <br />
+
+
+    <label for="Salary">Salary</label>
+    <input class="form-control form-control-lg"  aria-label=".form-control-lg example" type="number" id="Salary" name="Salary" value="@Model.Salary" />
+    <br />
+
+    <label for="Age">Age</label>
+    <input class ="form-control form-control-lg" aria-label=".form-control-lg example" type="number" id="Age" name="Age" value="@Model.Age" />
+    <br />
+
+
+    <label for="Office">Office</label>
+    <select class ="form-select" aria-label="Default select example" name="Office_Id" id="Office">
+        @foreach (Office Off2 in ViewBag.Off)
+        {
+            @if (Off2.Id == Model.Office_Id)
+            {
+                <option value="@Off2.Id" selected>@Off2.Name</option>
+            }
+            else
+            {
+                <option value="@Off2.Id">@Off2.Name</option>
+            }
+        }
+    </select>
+    <br />
+
+    <input type="submit" value="Edit" class=" btn btn-outline-primary" />
+</form>
+

@@ -5,27 +5,33 @@
 }
 <h1>the data of employee</h1>
 <hr />
-<a href="/Employee/NewForm">Add New Employee</a>
+<a href="/Employee/NewForm" class="btn btn-outline-primary">Add New Employee</a>
 <hr />
-<table>
-    <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Image</th>
-        <th>Controls</th>
-    </tr>
-    @foreach (Employee emp in Model)
-    {
-        <tr>
-            <td>@(index++)</td>
-            <td>@emp.Name</td>
-            <td>@emp.Email</td>
-            <td><img src="/images/@emp.Img" alt="student image" /></td>
-            <td>
-                <a href="/Employee/Details/@emp.Id">Details</a> |
-            </td>
-        </tr>
-    }
-</table>
 
+<table class="table table-primary table-striped">
+    <thead>
+        <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Image</th>
+    <th>Controls</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (Employee emp in Model)
+        {
+            <tr>
+                <td>@(index++)</td>
+                <td>@emp.Name</td>
+                <td>@emp.Email</td>
+                <td><img src="/images/@emp.Img" alt="student image" /></td>
+                <td>
+                    <a href="/Employee/Details/@emp.Id"><i class="fa-solid fa-circle-info"></i></a> |
+                    <a href="/Employee/EditForm/@emp.Id"><i class="fa-solid fa-pen-to-square"></i></a> |
+                    <a href="/Employee/Delete/@emp.Id"><i class="fa-solid fa-trash"></i></a> |
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
