@@ -1,0 +1,18 @@
+﻿@model Office
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<div class="card text-center" style="align-items:center">
+    <h1>Office Details</h1>
+    <div class="card-body">
+        <h5 class="Name">@Model.Name</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Location : @Model.Location</li>
+    </ul>
+    <div class="card-body">
+        <h5><a asp-controller="Office" asp-action="Index"  class="btn btn-outline-primary">Back to list</a></h5>
+    </div>
+</div>

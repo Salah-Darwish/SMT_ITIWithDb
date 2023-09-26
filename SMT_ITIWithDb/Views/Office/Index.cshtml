@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    int index = 1;
+}
+<h1>The data of Office</h1>
+<hr />
+<a asp-controller="Office" asp-action="Add" class="btn btn-outline-primary">Add New Office</a>
+<hr />
+
+<table class="table table-primary table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Location</th>
+         
+            <th>Controls</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Office off in Model)
+        {
+            <tr>
+                <td>@(index++)</td>
+                <td>@off.Name</td>
+                <td>@off.Location</td>
+             
+                <td>
+                    <a asp-controller="Office" asp-action="Details" asp-route-id="@off.Id" ><i class="fa-solid fa-circle-info"></i></a> |
+                    <a asp-controller="Office" asp-action="Edit" asp-route-id="@off.Id" ><i class="fa-solid fa-pen-to-square"></i></a> |
+                    <a asp-controller="Office" asp-action="Delete" asp-route-id="@off.Id"><i class="fa-solid fa-trash"></i></a> |
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,19 @@
+﻿@model Office
+@{
+    ViewData["Title"] = "NewForm";
+}
+
+<h1>New Employee</h1>
+
+<Form method="post" asp-controller="Office" asp-action="Add">
+
+    <input hidden asp-for="Id"/>
+    <label asp-for="Name"></label>
+    <input class="form-control form-control-lg" asp-for="Name"  aria-label=".form-control-lg example">
+    <br />
+    <label asp-for="Location"></label>
+    <input class="form-control form-control-lg" asp-for="Location" aria-label=".form-control-lg example" />
+    <br />
+    <input type="submit" value="Add" class="btn btn-outline-primary" />
+</Form>
+

@@ -1,0 +1,17 @@
+﻿@model Office
+
+<h1>Edit Office</h1>
+<form asp-controller="Office" asp-action="Edit" method="post">
+
+    <input  asp-for="Id" hidden />
+    <label asp-for="Name"></label>
+    <input class="form-control form-control-lg" aria-label=".form-control-lg example" asp-for="Name"/>
+    <br />
+
+    <label asp-for="Location"></label>
+    <input class="form-control form-control-lg" aria-label=".form-control-lg example" asp-for="Location"/>
+    <br />
+
+    <input type="submit" value="Edit" class=" btn btn-outline-primary" />
+</form>
+
