@@ -53,13 +53,7 @@ namespace SMT_ITIWithDb.Controllers
             {
                 Employee oldEmployee = context.employees.SingleOrDefault(c => c.Id == employee.Id);
 
-                oldEmployee.Name = employee.Name;
-                oldEmployee.Age = employee.Age;
-                oldEmployee.Salary = employee.Salary;
-                oldEmployee.Email = employee.Email;
-               
-                oldEmployee.Office_Id = employee.Office_Id;
-
+        context.employees.Update(oldEmployee);
                 context.SaveChanges();
                 return RedirectToAction("Index");
             }

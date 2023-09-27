@@ -1,21 +1,21 @@
-﻿
+﻿@Model Employee
 @{
     ViewData["Title"] = "Index";
-    int  index= 1 ; 
+    int index = 1;
 }
-<h1>the data of employee</h1>
-<hr />
-<a href="/Employee/NewForm" class="btn btn-outline-primary">Add New Employee</a>
+
+<h1>the data of employee with validation </h1>
+<a asp-controller="Validation" asp-action="Add" class="btn btn-outline-primary">Add New Employee With Validation </a>
 <hr />
 <table class="table table-primary table-striped">
     <thead>
         <tr>
-    <th>#</th>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Image</th>
-    <th>Controls</th>
-    </tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Image</th>
+            <th>Controls</th>
+        </tr>
     </thead>
     <tbody>
         @foreach (Employee emp in Model)
